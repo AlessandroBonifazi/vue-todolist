@@ -18,10 +18,14 @@
 
 <body>
     <div id="root">
-        <div class="container">
-            <h1>TO DO LIST</h1>
+        <div class="container container-lg">
+            <h2 class="text-center">TO DO LIST</h2>
             <ul>
-
+                <div v-for="(task, index) in tasksList">
+                    <li v-if="task.done == false">
+                        <i @click="taskIsDone(task)" class="fa-solid fa-circle-xmark"></i> {{task.text}}
+                    </li>
+                </div>
             </ul>
         </div>
     </div>

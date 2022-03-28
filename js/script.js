@@ -12,5 +12,21 @@ console.log('JS OK!');
 // Config
 const app = new Vue({
     el: '#root',
-
+    data: {
+        tasksList: [
+            { text: 'Fare la spesa', done: false },
+            { text: 'Fare la lavatrice', done: false },
+            { text: 'Pulire casa', done: false }
+        ],
+        doneTasks: [],
+        newTask: { text: '', done: false },
+    },
+    methods: {
+        taskIsDone(task) {
+            console.log('done!');
+            task.done = true;
+            this.doneTasks.push(task);
+            console.log(this.doneTasks);
+        },
+    }
 })

@@ -7,3 +7,14 @@
 /* Utility */
 
 /* Content */
+.container {
+    margin: 0 auto;
+}
+.container ul {
+    list-style-type: none;
+}
+.container ul li{
+    padding: 10px 0px;
+    margin: 2px 0px;
+    border: 1px dashed lightskyblue;
+}
