@@ -19,11 +19,27 @@
 <body>
     <div id="root">
         <div class="container container-lg">
+            <!-- list -->
             <h2 class="text-center">TO DO LIST</h2>
             <ul>
                 <div v-for="(task, index) in tasksList">
                     <li v-if="task.done == false">
                         <i @click="taskIsDone(task)" class="fa-solid fa-circle-xmark"></i> {{task.text}}
+                    </li>
+                </div>
+            </ul>
+            <!-- add task -->
+            <div class="text-center mt-3">
+                <h3>Aggiungi alla lista</h3>
+                <input @keyup.enter="addTask()" type="text" v-model="newTask.text" placeholder="Add new task">
+                <button @click="addTask()" type="button" class="btn btn-success">Add</button>
+            </div>
+            <!-- done list -->
+            <h3 class="text-center mt-3"> Old Tasks</h3>
+            <ul>
+                <div v-for="(task, index) in doneTasks">
+                    <li class="task-text">
+                        <i class="fa-solid fa-circle-check"></i> {{task.text}}
                     </li>
                 </div>
             </ul>

@@ -5,7 +5,9 @@
     box-sizing: border-box;
 }
 /* Utility */
-
+.text-line{
+    text-decoration: line-through;
+  }
 /* Content */
 .container {
     margin: 0 auto;

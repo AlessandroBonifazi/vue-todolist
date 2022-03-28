@@ -23,10 +23,13 @@ const app = new Vue({
     },
     methods: {
         taskIsDone(task) {
-            console.log('done!');
             task.done = true;
             this.doneTasks.push(task);
-            console.log(this.doneTasks);
+            // document.querySelector('.task-text').add('.text-line')
         },
+        addTask() {
+            this.tasksList.push(this.newTask);
+            this.newTask = '';
+        }
     }
 })
