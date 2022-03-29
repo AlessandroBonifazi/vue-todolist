@@ -19,17 +19,21 @@ const app = new Vue({
             { text: 'Pulire casa', done: false }
         ],
         doneTasks: [],
-        newTask: { text: '', done: false },
+        newTask: '',
     },
     methods: {
         taskIsDone(task) {
             task.done = true;
             this.doneTasks.push(task);
-            // document.querySelector('.task-text').add('.text-line')
         },
         addTask() {
-            this.tasksList.push(this.newTask);
+            this.tasksList.push(
+                {
+                    text: this.newTask,
+                    done: false,
+                }
+            );
             this.newTask = '';
-        }
-    }
+        },
+    },
 })

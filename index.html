@@ -30,8 +30,8 @@
             </ul>
             <!-- add task -->
             <div class="text-center mt-3">
-                <h3>Aggiungi alla lista</h3>
-                <input @keyup.enter="addTask()" type="text" v-model="newTask.text" placeholder="Add new task">
+                <h3>Add New Task</h3>
+                <input @keyup.enter="addTask()" type="text" v-model="newTask" placeholder="Add new task">
                 <button @click="addTask()" type="button" class="btn btn-success">Add</button>
             </div>
             <!-- done list -->
