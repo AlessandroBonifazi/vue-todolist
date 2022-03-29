@@ -20,3 +20,6 @@
     margin: 2px 0px;
     border: 1px dashed lightskyblue;
 }
+.fa-circle-xmark {
+    cursor: pointer;
+}
